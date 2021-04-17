@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+import Signin from './components/pages/signin/signin';
+import Dashboard from './components/pages/dashboard/dashboard';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+  Body {
+    background-color: #DCE1E3;
+    margin: 0;
+    padding: 0;
+  }
+`
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyles />
+      <Switch>
+          <Route exact path="/" component={Signin}>
+              <Signin />
+          </Route>
+          <Router path="/dashboard" component={Dashboard}>
+              <Dashboard />
+          </Router>
+      </Switch>
     </div>
   );
 }
