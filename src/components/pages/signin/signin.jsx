@@ -28,8 +28,24 @@ function Signin() {
                 <Box component="div" className={classes.styledSigninContainer}>
                     <form className={classes.styledForm}>
                         <Typography variant="h4">Sign In Page</Typography><br />
-                        <TextField className={classes.styledTextField} type="text" variant="outlined" value={email} placeholder="Enter Your Email" /><br /><br />
-                        <TextField className={classes.styledTextField} type="password" variant="outlined" value={password} placeholder="Enter Your Password" /><br /><br />
+                        <TextField
+                            className={classes.styledTextField}
+                            type="text"
+                            variant="outlined"
+                            name="email"
+                            value={email}
+                            onChange={(evt) => setEmail(evt.target.value)}
+                            placeholder="Enter Your Email"
+                        /><br /><br />
+                        <TextField
+                            className={classes.styledTextField}
+                            type="password"
+                            variant="outlined"
+                            name="password"
+                            value={password}
+                            onChange={(evt) => setPassword(evt.target.value)}
+                            placeholder="Enter Your Password"
+                        /><br /><br />
                         <StyledButton onClick={handleSignin} variant="contained">Signin</StyledButton><br /><br />
                         <Link href="#" onClick={()=>setShowHide(true)}>Register here</Link>
                     </form>
