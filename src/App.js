@@ -12,9 +12,9 @@ const GlobalStyles = createGlobalStyle`
   }
   Body {
     background-color: ${props => props.theme.backgroundColor};
+    font-family: ${props => props.theme.stockFont};
     margin: 0;
     padding: 0;
-    font-family: ${props => props.theme.stockFont};
   }
 `
 

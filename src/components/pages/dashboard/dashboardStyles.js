@@ -8,6 +8,7 @@ const StyledBanner = styled.div`
 const FlexDiv = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 const MiniNav = styled.div`
   width: 400px;

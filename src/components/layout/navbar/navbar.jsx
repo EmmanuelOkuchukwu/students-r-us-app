@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1
     },
     heading: {
-        flexGrow: 1
+        flexGrow: 1,
+        fontFamily: 'Noto Serif TC, serif!important'
     }
 }));
 

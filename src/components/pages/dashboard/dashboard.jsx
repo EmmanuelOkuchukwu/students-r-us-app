@@ -28,7 +28,7 @@ function Dashboard() {
                 <Navbar /><br />
                 <StyledBanner>
                     <FlexDiv>
-                        <Typography variant="h4">Welcome Back, {mockData.fullName}</Typography>
+                        <h1>Welcome Back, {mockData.fullName}</h1>
                         <Button>Profile</Button>
                     </FlexDiv>
                     <MiniNav>
@@ -42,14 +42,14 @@ function Dashboard() {
                     <div className="student-details">
                         <div style={{ textAlign: 'center' }}>
                             <PersonIcon style={{ fontSize: 100 }} />
-                            <Typography variant="h4">{mockData.fullName}'s Details</Typography>
+                            <h3><b>{mockData.fullName}'s Details</b></h3>
                         </div>
                         <div style={{ textAlign: 'center' }}>
-                            <Typography variant="h6">Your Full Name:</Typography>
+                            <h3>Your Full Name:</h3>
                             <p>{mockData.fullName}</p>
-                            <Typography variant="h6">Your Email:</Typography>
+                            <h3>Your Email:</h3>
                             <p>{mockData.email}</p>
-                            <Typography variant="h6">Your Group:</Typography>
+                            <h3 variant="h6">Your Group:</h3>
                             <p>{mockData.group}</p>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ function Dashboard() {
                         {mockData.results.length > 0 ? mockData.results.map(result => (
                             <div className="student-card" key={result.id}>
                                 <div className="card-header">
-                                    <Typography variant="h6">Student: {result.name}</Typography>
+                                    <h2>Student: {result.name}</h2>
                                 </div>
                                 <hr />
                                 <p>Student Email: {result.email}</p>
