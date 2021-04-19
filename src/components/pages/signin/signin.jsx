@@ -22,19 +22,20 @@ function Signin() {
     return (
         <Box component="div" className={classes.styledContainer}>
             {showHide ? (
-                <Register />
+                <Register setShowHide={setShowHide} />
             ) : (
                 <Box component="div" className={classes.styledSigninContainer}>
                     <form className={classes.styledForm}>
-                        <Typography variant="h4">Sign In Page</Typography><br />
+                        <Typography variant="h4">Sign In</Typography><br />
                         <TextField
+                            id="outlined-basic"
                             className={classes.styledTextField}
                             type="text"
                             variant="outlined"
                             name="email"
                             value={email}
                             onChange={(evt) => setEmail(evt.target.value)}
-                            placeholder="Enter Your Email"
+                            label="Your Email"
                         /><br /><br />
                         <TextField
                             className={classes.styledTextField}
@@ -43,9 +44,10 @@ function Signin() {
                             name="password"
                             value={password}
                             onChange={(evt) => setPassword(evt.target.value)}
-                            placeholder="Enter Your Password"
+                            label="Enter Password"
                         /><br /><br />
-                        <StyledButton onClick={handleSignin} variant="contained">Signin</StyledButton><br /><br />
+                        <StyledButton onClick={handleSignin} variant="contained">Sign In</StyledButton><br /><br />
+                        <Typography variant="p">New to Students R Us</Typography>{' '}
                         <Link href="#" onClick={()=>setShowHide(true)}>Register here</Link>
                     </form>
                 </Box>
@@ -55,11 +57,11 @@ function Signin() {
 }
 
 const useStyles = makeStyles({
-    styledButton: {
-        color: '#1BA1E2',
-        backgroundColor: 'blue',
-        width: '100%'
-    },
+    // styledButton: {
+    //     color: '#1BA1E2',
+    //     backgroundColor: 'blue',
+    //     width: '100%'
+    // },
     styledTextField: {
         width: '100%'
     },
@@ -68,20 +70,20 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        height: '100vh'
+        height: '100vh',
     },
     styledSigninContainer: {
-        padding: '20px',
-        width: '435px',
+        padding: '30px',
+        width: '400px',
         backgroundColor: 'lightblue',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        height: '400px',
+        height: '450px',
         borderRadius: '5px'
     },
     styledForm: {
-        width: '400px',
+        width: '300px',
     }
 });
 
