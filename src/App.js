@@ -3,32 +3,37 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Signin from './components/pages/signin/signin';
 import Dashboard from './components/pages/dashboard/dashboard';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import theme from './config/theme'
 
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
   Body {
-    background-color: #DCE1E3;
+    background-color: ${props => props.theme.backgroundColor};
     margin: 0;
     padding: 0;
+    font-family: ${props => props.theme.stockFont};
   }
 `
 
 function App() {
   return (
-    <div className="App">
-      <GlobalStyles />
-      <Switch>
-          <Route exact path="/" component={Signin}>
-              <Signin />
-          </Route>
-          <Router path="/dashboard" component={Dashboard}>
-              <Dashboard />
-          </Router>
-      </Switch>
-    </div>
+    <ThemeProvider theme={theme}>
+        <div className="App">
+            <GlobalStyles />
+            <Switch>
+                <Route exact path="/" component={Signin}>
+                    <Signin />
+                </Route>
+                <Router path="/dashboard" component={Dashboard}>
+                    <Dashboard />
+                </Router>
+            </Switch>
+        </div>
+    </ThemeProvider>
+
   );
 }
 
