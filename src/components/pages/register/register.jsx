@@ -96,7 +96,7 @@ function Register({setShowHide}) {
                 <Typography variant="p">
                     Head back to the
                 </Typography>{' '}
-                <StyledLink onClick={()=>setShowHide(false)}>Sign In Page</StyledLink>
+                <StyledLink onClick={()=>setShowHide(false)}>Sign In</StyledLink>
             </form>
         </Box>
     );
