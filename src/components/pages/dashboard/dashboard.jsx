@@ -6,6 +6,7 @@ import { StyledBanner, FlexDiv, MiniNav, DashboardSection } from './dashboardSty
 import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
 import { mockData } from '../../data/mockData';
+import { useAlert } from 'react-alert';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Dashboard() {
     const [isLoading, setIsLoading] = useState(false);
+    const alert = useAlert();
     React.useEffect(() => {
         setIsLoading(false)
     },[])

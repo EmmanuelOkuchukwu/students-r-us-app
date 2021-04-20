@@ -7,6 +7,7 @@ import { StyledButton, StyledContainer } from './signinStyles';
 import Link from '@material-ui/core/Link';
 import Register from '../register/register';
 import { useHistory } from 'react-router-dom';
+import { useAlert } from 'react-alert';
 
 function Signin() {
     const history = useHistory();
@@ -14,10 +15,12 @@ function Signin() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const classes = useStyles();
+    const alert = useAlert();
 
     const handleSignin = (evt) => {
         evt.preventDefault();
         history.push('/dashboard');
+        alert.success('Successfully Signed In!');
     }
     return (
         <Box component="div" className={classes.styledContainer}>
