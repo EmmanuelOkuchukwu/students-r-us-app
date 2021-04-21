@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Navbar from '../../layout/navbar/navbar';
-import Typography from '@material-ui/core/Typography';
 import { StyledBanner, FlexDiv, MiniNav, DashboardSection } from './dashboardStyles';
 import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
@@ -27,11 +26,12 @@ function Dashboard() {
     } else {
         return (
             <div className={classes.root}>
-                <Navbar /><br />
+                <Navbar />
+                {/*--------------------------------------------Banner Area-------------------------------------------*/}
                 <StyledBanner>
                     <FlexDiv>
                         <h1>Welcome Back, {mockData.fullName}</h1>
-                        <Button>Profile</Button>
+                        <Button className="btn-profile">Profile</Button>
                     </FlexDiv>
                     <MiniNav>
                         <ul>
@@ -40,6 +40,7 @@ function Dashboard() {
                         </ul>
                     </MiniNav>
                 </StyledBanner><br />
+                {/*----------------------------------------Main Dashboard Area---------------------------------------*/}
                 <DashboardSection>
                     <div className="student-details">
                         <div style={{ textAlign: 'center' }}>
@@ -51,15 +52,16 @@ function Dashboard() {
                             <p>{mockData.fullName}</p>
                             <h3>Your Email:</h3>
                             <p>{mockData.email}</p>
-                            <h3 variant="h6">Your Group:</h3>
+                            <h3>Your Group:</h3>
                             <p>{mockData.group}</p>
                         </div>
                     </div>
+                    {/* TODO add logic for the add score form to appear after clicking a button */}
                     <div className="group-details">
                         {mockData.results.length > 0 ? mockData.results.map(result => (
                             <div className="student-card" key={result.id}>
                                 <div className="card-header">
-                                    <h2>Student: {result.name}</h2>
+                                    <h2>{result.name}</h2>
                                 </div>
                                 <hr />
                                 <p>Student Email: {result.email}</p>

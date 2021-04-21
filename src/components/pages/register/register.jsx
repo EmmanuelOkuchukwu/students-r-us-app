@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
     styledForm: {
         width: '300px',
-        paddingTop: theme.spacing(2)
+        // paddingTop: theme.spacing(1)
     },
     styledTextField: {
         width: '100%',
@@ -47,7 +47,7 @@ function Register({setShowHide}) {
     return (
         <Box component="div" className={classes.styledRegisterContainer}>
             <form className={classes.styledForm}>
-                <Typography variant="h3">Register</Typography><br />
+                <h1>Register</h1><br />
                 <TextField
                     className={classes.styledTextField}
                     type="text"
@@ -85,7 +85,7 @@ function Register({setShowHide}) {
                 </Select><br /><br />
                 <TextField
                     className={classes.styledTextField}
-                    type="text"
+                    type="password"
                     name="password"
                     label="Enter your Password"
                     value={password}

@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { positions, transitions, Provider as AlertProvider } from 'react-alert';
 import AlertTemplate from "react-alert-template-basic";
+import { Provider } from 'react-redux';
+import store from './app/store';
 
 const options = {
     position: positions.TOP_CENTER,
@@ -16,11 +18,13 @@ const options = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <AlertProvider template={AlertTemplate} {...options}>
-        <App />
-      </AlertProvider>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <AlertProvider template={AlertTemplate} {...options}>
+          <App />
+        </AlertProvider>
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
