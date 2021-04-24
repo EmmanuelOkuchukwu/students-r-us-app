@@ -4,10 +4,19 @@ const StyledBanner = styled.div`
   height: 220px;
   padding: 10px 20px;
   border-bottom: 1px solid #000;
-  // Mobile Responsive 
+  // Tablet view
+  @media screen and (max-width: ${props => props.theme.tablet}) {
+    height: 190px;
+    h1 {
+      font-size: 25px;
+    }
+    .btn-profile {
+      font-size: 16px;
+    }
+  }
+  // Mobile view 
   @media screen and (max-width: ${props => props.theme.mobile}) {
     height: 165px;
-    
     h1 {
       font-size: 16px;
     }
@@ -15,6 +24,7 @@ const StyledBanner = styled.div`
       font-size: 12px;
     }
   }
+
 `
 const FlexDiv = styled.div`
   display: flex;
@@ -39,18 +49,29 @@ const MiniNav = styled.div`
     a {
       text-decoration: none;
       color: steelblue;
+      border-right: 1px solid #000;
+      padding: 10px 20px;
       &:hover {
         color: #282c34;
         transition: all 0.2s ease-in-out;
       }
     }
   }
+  // Tablet view
+  @media screen and (max-width: ${props => props.theme.tablet}) {
+    padding: 5px;
+    a {
+      font-size: 20px;
+    }
+  }
+  // Mobile view
   @media screen and (max-width: ${props => props.theme.mobile}) {
    padding: 1px;
     a {
       font-size: 15px;
     }
   }
+
 `
 const DashboardSection = styled.div`
   display: flex;
@@ -69,11 +90,43 @@ const DashboardSection = styled.div`
   }
   .student-card {
     width: 30%;
+    height: 260px;
     margin: 10px auto;
     padding: 15px;
     border: 1px solid #000;
     //.card-header {}
   }
+  // Tablet view
+  @media screen and (max-width: ${props => props.theme.tablet}) {
+    flex-direction: column;
+    .group-details {
+      flex-direction: column;
+      .student-card {
+        width: 100%;
+        height: 100%;
+        p {
+          font-size: 20px;
+          text-align: center;
+        }
+        h2 {
+          font-size: 26px;
+          text-align: center;
+        }
+      }
+    }
+    .student-details {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      p {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 25px;
+      }
+    }
+  }
+  // Mobile View
   @media screen and (max-width: ${props => props.theme.mobile}) {
     flex-direction: column;
     .student-details {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Navbar from '../../layout/navbar/navbar';
+import Navbar from '../../layout/navbar';
 import { StyledBanner, FlexDiv, MiniNav, DashboardSection } from './dashboardStyles';
 import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
@@ -65,9 +65,9 @@ function Dashboard() {
                                 </div>
                                 <hr />
                                 <p>Student Email: {result.email}</p>
-                                <p>Score: {result.rateScore}</p>
                                 <p>Comments: {result.comments}</p>
                                 <p>Rater's Username: {result.raterUsername}</p>
+                                <p>Score: {result.rateScore}</p>
                             </div>
                         )) : <div className="not-found">No groups found</div>
                         }

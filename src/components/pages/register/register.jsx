@@ -73,6 +73,7 @@ function Register({setShowHide}) {
                     onChange={(evt) => setGroup(evt.target.value)}
                     variant="outlined"
                     placeholder="Select a Group"
+                    label="Select group"
                 >
                     <MenuItem>
                         <em>Select group</em>

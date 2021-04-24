@@ -8,6 +8,8 @@ import Link from '@material-ui/core/Link';
 import Register from '../register/register';
 import { useHistory } from 'react-router-dom';
 import { useAlert } from 'react-alert';
+import { useFormik } from 'formik';
+import yup from 'yup';
 
 function Signin() {
     const history = useHistory();
@@ -22,13 +24,20 @@ function Signin() {
         history.push('/dashboard');
         alert.success('Successfully Signed In!');
     }
+    // const SigninValidation = yup.object().shape({
+    //     email: yup
+    //         .string()
+    //         .email(),
+    //         .required(),
+    //     password: yup
+    // })
     return (
         <Box component="div" className={classes.styledContainer}>
             {showHide ? (
                 <Register setShowHide={setShowHide} />
             ) : (
                 <Box component="div" className={classes.styledSigninContainer}>
-                    <form className={classes.styledForm}>
+                    <form onSubmit={handleSignin} className={classes.styledForm}>
                         <Typography variant="h4">Sign In</Typography><br />
                         <TextField
                             id="outlined-basic"
@@ -49,7 +58,7 @@ function Signin() {
                             onChange={(evt) => setPassword(evt.target.value)}
                             label="Enter Password"
                         /><br /><br />
-                        <StyledButton onClick={handleSignin} variant="contained">Sign In</StyledButton><br /><br />
+                        <StyledButton type="submit" variant="contained">Sign In</StyledButton><br /><br />
                         <Typography variant="p">New to Students R Us</Typography>{' '}
                         <Link href="#" onClick={()=>setShowHide(true)}>Register here</Link>
                     </form>
