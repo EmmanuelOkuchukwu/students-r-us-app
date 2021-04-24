@@ -56,7 +56,7 @@ function Dashboard() {
                             <p>{mockData.group}</p>
                         </div>
                     </div>
-                    {/* TODO add logic for the add score form to appear after clicking a button */}
+                    {/* TODO: add logic for the add score form to appear after clicking a button */}
                     <div className="group-details">
                         {mockData.results.length > 0 ? mockData.results.map(result => (
                             <div className="student-card" key={result.id}>
