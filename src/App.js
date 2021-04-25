@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Signin from './components/pages/signin/signin';
 import Dashboard from './components/pages/dashboard/dashboard';
+import AddRate from './components/pages/addRate/addRate';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from './config/theme'
 
@@ -28,13 +29,12 @@ function App() {
                 <Route exact path="/" component={Signin}>
                     <Signin />
                 </Route>
-                <Router path="/dashboard" component={Dashboard}>
+                <Route path="/dashboard" component={Dashboard}>
                     <Dashboard />
-                </Router>
+                </Route>
             </Switch>
         </div>
     </ThemeProvider>
-
   );
 }
 

@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
 import { mockData } from '../../data/mockData';
 import { useAlert } from 'react-alert';
+import AddRate from '../addRate/addRate';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Dashboard() {
     const [isLoading, setIsLoading] = useState(false);
+    const [showHide, setShowHide] = useState(false);
     const alert = useAlert();
     React.useEffect(() => {
         setIsLoading(false)
@@ -35,7 +37,7 @@ function Dashboard() {
                     </FlexDiv>
                     <MiniNav>
                         <ul>
-                            <li><a href="#">Rate a student</a></li>
+                            <li><a onClick={() => setShowHide(true)}>Rate a student</a></li>
                             <li><a href="#">View your score</a></li>
                         </ul>
                     </MiniNav>
@@ -57,7 +59,10 @@ function Dashboard() {
                         </div>
                     </div>
                     {/* TODO: add logic for the add score form to appear after clicking a button */}
-                    <div className="group-details">
+                    {showHide ? (
+                        <AddRate setShowHide={setShowHide} />
+                    ) : (
+                        <div className="group-details">
                         {mockData.results.length > 0 ? mockData.results.map(result => (
                             <div className="student-card" key={result.id}>
                                 <div className="card-header">
@@ -72,6 +77,7 @@ function Dashboard() {
                         )) : <div className="not-found">No groups found</div>
                         }
                     </div>
+                    )}
                 </DashboardSection>
             </div>
         );

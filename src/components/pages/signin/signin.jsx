@@ -60,7 +60,7 @@ function Signin() {
                         /><br /><br />
                         <StyledButton type="submit" variant="contained">Sign In</StyledButton><br /><br />
                         <Typography variant="p">New to Students R Us</Typography>{' '}
-                        <Link href="#" onClick={()=>setShowHide(true)}>Register here</Link>
+                        <Link href="#" onClick={() => setShowHide(true)}>Register here</Link>
                     </form>
                 </Box>
             )}

@@ -51,6 +51,7 @@ const MiniNav = styled.div`
       color: steelblue;
       border-right: 1px solid #000;
       padding: 10px 20px;
+      cursor: pointer;
       &:hover {
         color: #282c34;
         transition: all 0.2s ease-in-out;
@@ -89,11 +90,10 @@ const DashboardSection = styled.div`
   .group-details {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 0 10px;
+    width: 50%;
   }
   .student-card {
-    width: 30%;
+    width: 45%;
     height: 260px;
     margin: 10px auto;
     padding: 15px;
@@ -105,6 +105,7 @@ const DashboardSection = styled.div`
     flex-direction: column;
     .group-details {
       flex-direction: column;
+      width: 100%;
       .student-card {
         width: 100%;
         height: 100%;
@@ -122,6 +123,7 @@ const DashboardSection = styled.div`
       margin: 0 auto;
       width: 100%;
       height: 100%;
+      padding: 15px;
       p {
         font-size: 20px;
       }
