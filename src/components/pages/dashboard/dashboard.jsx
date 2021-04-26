@@ -38,7 +38,7 @@ function Dashboard() {
                     <MiniNav>
                         <ul>
                             <li><a onClick={() => setShowHide(true)}>Rate a student</a></li>
-                            <li><a href="#">View your score</a></li>
+                            <li><a href="/view-score">View your score</a></li>
                         </ul>
                     </MiniNav>
                 </StyledBanner><br />
