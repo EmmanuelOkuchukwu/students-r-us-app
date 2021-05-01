@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 
 const StyledAddRateForm = styled.div`
-  border: 1px solid #000;
   padding: 25px;
   margin: 5px;  
   width: 40%;
+  background-color: ${props => props.theme.cardBackgroundColor};
   form {
       width: 100%;
   }

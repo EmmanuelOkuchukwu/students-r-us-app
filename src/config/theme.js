@@ -8,6 +8,7 @@ const theme = {
     ...media,
     stockFont: `Noto Serif TC, serif`,
     backgroundColor: '#DCE1E3',
+    cardBackgroundColor: '#efefef',
     // colorBackground: (opacity = 1) => `rgba(33, 38, 47, ${opacity})`,
 }
 

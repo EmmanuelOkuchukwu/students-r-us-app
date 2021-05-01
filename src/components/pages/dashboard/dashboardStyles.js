@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 const StyledBanner = styled.div`
+  //clip-path: polygon(100% 0,100% 100%,50% calc(100% - 50px),0 100%,0 0);
   height: 220px;
   padding: 10px 20px;
   border-bottom: 1px solid #000;
+  background-color: ${props => props.theme.cardBackgroundColor};
   // Tablet view
   @media screen and (max-width: ${props => props.theme.tablet}) {
     height: 190px;
@@ -24,20 +26,23 @@ const StyledBanner = styled.div`
       font-size: 12px;
     }
   }
-
 `
 const FlexDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 `
 const MiniNav = styled.div`
   //width: 400px;
   //height: 60px;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #000;
   border-radius: 4px;
-  margin: 20px 0;
+  //margin: 20px 0;
+  max-width: 1400px;
+  margin: 0 auto;
   ul {
     display: flex;
     list-style: none;
@@ -82,22 +87,27 @@ const DashboardSection = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  max-width: 1420px;
+  margin: 0 auto;
   .student-details {
     width: 350px;
-    box-shadow: 2px 2px 4px #888888;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;;
     height: 450px;
+    background-color: ${props => props.theme.cardBackgroundColor};
   }
   .group-details {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 55%;
   }
   .student-card {
     width: 45%;
     height: 260px;
     margin: 10px auto;
     padding: 15px;
-    border: 1px solid #000;
+    //border: 1px solid #000;
+    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
+    background-color: ${props => props.theme.cardBackgroundColor};
   }
   
   // Tablet view

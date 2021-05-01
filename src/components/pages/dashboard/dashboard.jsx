@@ -27,7 +27,7 @@ function Dashboard() {
         return <div>Loading...</div>
     } else {
         return (
-            <div className={classes.root}>
+            <div className={classes.root} data-testid="dashboard-1">
                 <Navbar />
                 {/*--------------------------------------------Banner Area-------------------------------------------*/}
                 <StyledBanner>
