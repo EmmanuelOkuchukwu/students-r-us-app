@@ -1,15 +1,16 @@
 import React from 'react';
-import TextField from '@material-ui/core/TextField';
 
-export default function CustomTextField() {
+export default function CustomTextField({ type, name, placeholder, onChange, value, className }) {
     return (
         <div>
-            <TextField 
-                type={type} 
-                id={id} 
-                variant={variant} 
-                label={label} 
+            <input
+                type={type}
+                name={name}
+                placeholder={placeholder}
+                onChange={onChange}
+                value={value}
+                className={className}
             />
         </div>
-    )
+    );
 }

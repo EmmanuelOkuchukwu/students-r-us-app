@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import useAlert from 'react-alert';
-import { StyledAddRateForm, StyledTextField } from './addRateStyles';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import { StyledAddRateForm, StyledTextField, StyledButton } from './addRateStyles';
 
-export default function AddRate({ setShowHide }) {
+export default function AddRate() {
     const [name, setName] = useState('');
     const [comments, setComments] = useState('');
     const [addScore, setAddScore] = useState('');
@@ -19,8 +17,7 @@ export default function AddRate({ setShowHide }) {
                 <StyledTextField variant="outlined" type="number" value={addScore} onChange={(evt) => setAddScore(evt.target.value)} name="addscore" label="Add score" /><br />
                 <StyledTextField variant="outlined" type="text" value={studentName} onChange={(evt) => setStudentName(evt.target.value)} name="studentname" label="Name of Student" /><br />
                 <div className="flex-btn">
-                    <Button variant="outlined">Submit Rate</Button>
-                    <Button variant="outlined" onClick={() => setShowHide(false)}>Back to main board</Button>
+                    <StyledButton>Submit Rate</StyledButton>
                 </div>
             </form>
         </StyledAddRateForm>

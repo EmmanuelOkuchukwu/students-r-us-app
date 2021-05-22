@@ -1,48 +1,48 @@
 import styled from 'styled-components';
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
 
-export const StyledButton = styled(Button)`
-  background-color: lightskyblue;
-  width: 100%;
+export const StyledButton = styled.div`
+  background-color: ${props => props.theme.backgroundColor};
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px 0;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: lightslategrey;
+    color: #fff;
+  }
 `
 
-export const StyledContainer = styled(Box)`
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   height: 100vh;
+export const StyledContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 `
 
-
-// export default theme => ({
-//     styledButton: {
-//         color: '#1BA1E2',
-//         backgroundColor: 'blue',
-//         width: '100%'
-//     },
-//     styledTextField: {
-//         width: '100%'
-//     },
-//     styledContainer: {
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         flexDirection: 'column',
-//         height: '100vh'
-//     },
-//     styledSigninContainer: {
-//         padding: '20px',
-//         width: '450px',
-//         backgroundColor: 'lightblue',
-//         display: 'flex',
-//         alignItems: 'center',
-//         flexDirection: 'column',
-//         height: '400px',
-//         borderRadius: '5px'
-//     },
-//     styledForm: {
-//         width: '400px',
-//     }
-// })
+export const StyledSigninContainer = styled.div`
+  padding: 30px;
+  width: 400px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 450px;
+  border-radius: 5px;
+  .styled-form {
+    width: 300px;
+  }
+  .text-field {
+    height: 35px;
+    margin: 5px 0;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 0 6px;
+    &:focus {
+      outline: none;
+    }
+  }
+`

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/Styles';
-import { StyledButton, StyledContainer } from './signinStyles';
-import Link from '@material-ui/core/Link';
+import { StyledButton, StyledContainer, StyledSigninContainer } from './signinStyles';
+import CustomTextField from '../../layout/customTextField';
+import { Link } from 'react-router-dom';
 import Register from '../register/register';
 import { useHistory } from 'react-router-dom';
 import { useAlert } from 'react-alert';
@@ -16,7 +14,6 @@ function Signin() {
     const [showHide, setShowHide] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const classes = useStyles();
     const alert = useAlert();
 
     const handleSignin = (evt) => {
@@ -32,71 +29,39 @@ function Signin() {
     //     password: yup
     // })
     return (
-        <Box component="div" className={classes.styledContainer}>
+        <StyledContainer>
             {showHide ? (
                 <Register setShowHide={setShowHide} />
             ) : (
-                <Box component="div" className={classes.styledSigninContainer}>
-                    <form onSubmit={handleSignin} className={classes.styledForm}>
-                        <Typography variant="h4">Sign In</Typography><br />
-                        <TextField
-                            id="outlined-basic"
-                            className={classes.styledTextField}
+                <StyledSigninContainer>
+                    <form className="styled-form">
+                        <h1>Sign In</h1>
+                        <CustomTextField
+                            className="text-field"
                             type="text"
                             variant="outlined"
                             name="email"
                             value={email}
                             onChange={(evt) => setEmail(evt.target.value)}
-                            label="Your Email"
-                        /><br /><br />
-                        <TextField
-                            className={classes.styledTextField}
+                            placeholder="Your Email"
+                        />
+                        <CustomTextField
+                            className="text-field"
                             type="password"
                             variant="outlined"
                             name="password"
                             value={password}
                             onChange={(evt) => setPassword(evt.target.value)}
-                            label="Enter Password"
-                        /><br /><br />
-                        <StyledButton type="submit" variant="contained">Sign In</StyledButton><br /><br />
+                            placeholder="Enter Password"
+                        />
+                        <StyledButton onClick={handleSignin}>Sign In</StyledButton><br /><br />
                         <Typography variant="p">New to Students R Us</Typography>{' '}
-                        <Link href="#" onClick={() => setShowHide(true)}>Register here</Link>
+                        <Link to="#" onClick={() => setShowHide(true)}>Register here</Link>
                     </form>
-                </Box>
+                </StyledSigninContainer>
             )}
-        </Box>
+        </StyledContainer>
     );
 }
-
-const useStyles = makeStyles({
-    // styledButton: {
-    //     color: '#1BA1E2',
-    //     backgroundColor: 'blue',
-    //     width: '100%'
-    // },
-    styledTextField: {
-        width: '100%'
-    },
-    styledContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        height: '100vh',
-    },
-    styledSigninContainer: {
-        padding: '30px',
-        width: '400px',
-        backgroundColor: 'lightblue',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-        height: '450px',
-        borderRadius: '5px'
-    },
-    styledForm: {
-        width: '300px',
-    }
-});
 
 export default Signin;

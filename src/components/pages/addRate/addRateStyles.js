@@ -30,7 +30,20 @@ const StyledTextField = styled(TextField)`
   margin: 5px; 
 `
 
+const StyledButton = styled.div`
+  background-color: ${props => props.theme.backgroundColor};
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  &:hover {
+    background-color: lightslategrey;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+  }
+`
+
 export {
   StyledAddRateForm,
-  StyledTextField
+  StyledTextField,
+  StyledButton
 }

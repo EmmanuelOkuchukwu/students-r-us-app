@@ -37,7 +37,7 @@ function Dashboard() {
                     </FlexDiv>
                     <MiniNav>
                         <ul>
-                            <li><a onClick={() => setShowHide(true)}>Rate a student</a></li>
+                            <li><a onClick={() => setShowHide(!showHide)}>Rate a student</a></li>
                             <li><a href="/view-score">View your score</a></li>
                         </ul>
                     </MiniNav>
@@ -60,7 +60,7 @@ function Dashboard() {
                     </div>
                     {/* TODO: add logic for the add score form to appear after clicking a button */}
                     {showHide ? (
-                        <AddRate setShowHide={setShowHide} />
+                        <AddRate />
                     ) : (
                         <div className="group-details">
                         {mockData.results.length > 0 ? mockData.results.map(result => (

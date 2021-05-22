@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 const StyledBanner = styled.div`
-  //clip-path: polygon(100% 0,100% 100%,50% calc(100% - 50px),0 100%,0 0);
   height: 220px;
   padding: 10px 20px;
-  border-bottom: 1px solid #000;
   background-color: ${props => props.theme.cardBackgroundColor};
   // Tablet view
   @media screen and (max-width: ${props => props.theme.tablet}) {
@@ -35,14 +33,11 @@ const FlexDiv = styled.div`
   margin: 0 auto;
 `
 const MiniNav = styled.div`
-  //width: 400px;
-  //height: 60px;
   padding: 5px;
-  border: 1px solid #000;
   border-radius: 4px;
-  //margin: 20px 0;
   max-width: 1400px;
   margin: 0 auto;
+  box-shadow: ${props => props.theme.MainShadow};
   ul {
     display: flex;
     list-style: none;
@@ -91,7 +86,7 @@ const DashboardSection = styled.div`
   margin: 0 auto;
   .student-details {
     width: 350px;
-    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;;
+    box-shadow: ${props => props.theme.MainShadow};
     height: 450px;
     background-color: ${props => props.theme.cardBackgroundColor};
   }
@@ -105,8 +100,7 @@ const DashboardSection = styled.div`
     height: 260px;
     margin: 10px auto;
     padding: 15px;
-    //border: 1px solid #000;
-    box-shadow: rgb(0 0 0 / 10%) 0 4px 12px;
+    box-shadow: ${props => props.theme.MainShadow};
     background-color: ${props => props.theme.cardBackgroundColor};
   }
   
@@ -157,7 +151,6 @@ const DashboardSection = styled.div`
     }
     .group-details {
       margin: auto;
-      //max-width: 1500px;
     }
   }
 `
