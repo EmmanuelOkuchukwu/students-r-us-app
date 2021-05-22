@@ -31,7 +31,7 @@ function Signin() {
     return (
         <StyledContainer>
             {showHide ? (
-                <Register setShowHide={setShowHide} />
+                <Register setShowHide={setShowHide} showHide={showHide} />
             ) : (
                 <StyledSigninContainer>
                     <form className="styled-form">

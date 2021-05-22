@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import Button from '@material-ui/core/Button';
 import { RegisterButton, StyledLink } from './registerStyles';
+import { useAlert } from 'react-alert';
 
 const useStyles = makeStyles((theme) => ({
     styledRegisterContainer: {
@@ -36,14 +37,19 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Register({setShowHide}) {
+function Register({ setShowHide, showHide }) {
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [fullname, setFullname] = useState('');
     const [group, setGroup] = useState('');
     const [password, setPassword] = useState('');
+    const alert = useAlert();
     const classes = useStyles()
-
+    const handleSignup = (evt) => {
+        evt.preventDefault();
+        alert.success('Successfully registered!');
+        setShowHide(!showHide);
+    }
     return (
         <Box component="div" className={classes.styledRegisterContainer}>
             <form className={classes.styledForm}>
@@ -93,7 +99,7 @@ function Register({setShowHide}) {
                     onChange={(evt) => setPassword(evt.target.value)}
                     variant="outlined"
                 /><br /><br />
-                <RegisterButton>Register</RegisterButton><br /><br />
+                <RegisterButton onClick={handleSignup}>Register</RegisterButton><br /><br />
                 <Typography variant="p">
                     Head back to the
                 </Typography>{' '}
