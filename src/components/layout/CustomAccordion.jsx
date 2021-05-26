@@ -9,10 +9,12 @@ const CustomAccordion = ({ id, studentName, score, comment }) => {
                 <h1>{studentName}</h1>
                 {isActive ? <i className="fas fa-minus" /> : <i className="fas fa-plus" />}
             </AccordionTitle>
-            { isActive && <AccordionContent>
-                <p>Your Score: {score}</p>
-                <p>The Comments: {comment}</p>
-            </AccordionContent> }
+            {isActive &&
+                <AccordionContent>
+                    <p>Your Score: {score}</p>
+                    <p>The Comments: {comment}</p>
+                </AccordionContent>
+            }
         </Accordion>
     );
 }
@@ -25,7 +27,7 @@ const Accordion = styled.div`
 `
 const AccordionTitle = styled.div`
   height: 66.67px;
-  border: 1px solid #000;
+  border-radius: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,8 +49,9 @@ const AccordionTitle = styled.div`
 `
 const AccordionContent = styled.div`
   width: 100%;
-  border: 1px solid #000;
+  border-top: 1px solid #000;
   background-color: lightgrey;
+  border-radius: 4px;
   height: 133.33px;
   p {
     margin: 0 10px;

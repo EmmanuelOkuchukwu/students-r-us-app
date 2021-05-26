@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Typography from '@material-ui/core/Typography';
 import { StyledButton, StyledContainer, StyledSigninContainer } from './signinStyles';
 import CustomTextField from '../../layout/customTextField';
 import { Link } from 'react-router-dom';
@@ -55,8 +54,7 @@ function Signin() {
                             placeholder="Enter Password"
                         />
                         <StyledButton onClick={handleSignin}>Sign In</StyledButton><br /><br />
-                        <Typography variant="p">New to Students R Us</Typography>{' '}
-                        <Link to="#" onClick={() => setShowHide(true)}>Register here</Link>
+                        <p>New to Students R Us{' '}<Link to="#" onClick={() => setShowHide(true)}>Register here</Link></p>
                     </form>
                 </StyledSigninContainer>
             )}

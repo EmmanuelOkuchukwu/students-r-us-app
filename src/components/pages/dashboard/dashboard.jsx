@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Navbar from '../../layout/navbar';
 import { StyledBanner, FlexDiv, MiniNav, DashboardSection } from './dashboardStyles';
-import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
 import { mockData } from '../../data/mockData';
 import { useAlert } from 'react-alert';
 import AddRate from '../addRate/addRate';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1
-    },
-}));
 
 function Dashboard() {
     const [isLoading, setIsLoading] = useState(false);
@@ -21,19 +13,17 @@ function Dashboard() {
     React.useEffect(() => {
         setIsLoading(false)
     },[])
-    const classes = useStyles();
 
     if(isLoading) {
         return <div>Loading...</div>
     } else {
         return (
-            <div className={classes.root} data-testid="dashboard-1">
+            <div data-testid="dashboard-1">
                 <Navbar />
                 {/*--------------------------------------------Banner Area-------------------------------------------*/}
                 <StyledBanner>
                     <FlexDiv>
                         <h1>Welcome Back, {mockData.fullName}</h1>
-                        <Button className="btn-profile">Profile</Button>
                     </FlexDiv>
                     <MiniNav>
                         <ul>
