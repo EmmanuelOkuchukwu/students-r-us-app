@@ -11,7 +11,7 @@ export default function ViewScore() {
             <Navbar />
             <br />
             <Breadcrumb />
-            <h1>View Your Score</h1>
+            <h1 className="score-title">View Your Score</h1>
             {comments.comments.length > 0 ? comments.comments.map(({ id, studentName, score, comment }) => (
                 <div className="accordion-size" key={id}>
                     <CustomAccordion id={id} studentName={studentName} score={score} comment={comment} />

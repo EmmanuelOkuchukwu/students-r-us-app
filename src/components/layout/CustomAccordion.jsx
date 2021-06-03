@@ -22,8 +22,8 @@ const CustomAccordion = ({ id, studentName, score, comment }) => {
 export default CustomAccordion;
 
 const Accordion = styled.div`
-  width: 100%;
-  margin: 10px 0;
+  max-width: 1200px;
+  margin: 10px auto;
 `
 const AccordionTitle = styled.div`
   height: 66.67px;

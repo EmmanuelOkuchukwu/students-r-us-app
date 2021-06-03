@@ -11,8 +11,8 @@ const ViewScoreStyled = styled.div`
       text-align: left;
     }
   }
-  h1 {
-    max-width: 1400px;
+  .score-title {
+    max-width: 1200px;
     margin: 0 auto;
   }
 `
