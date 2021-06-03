@@ -4,6 +4,7 @@ const StyledBanner = styled.div`
   height: 220px;
   padding: 10px 20px;
   background-color: ${props => props.theme.cardBackgroundColor};
+  
   // Tablet view
   @media screen and (max-width: ${props => props.theme.tablet}) {
     height: 190px;
@@ -14,6 +15,7 @@ const StyledBanner = styled.div`
       font-size: 16px;
     }
   }
+  
   // Mobile view 
   @media screen and (max-width: ${props => props.theme.mobile}) {
     height: 165px;
@@ -29,13 +31,13 @@ const FlexDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 `
 const MiniNav = styled.div`
   padding: 5px;
   border-radius: 4px;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   box-shadow: ${props => props.theme.MainShadow};
   ul {
@@ -76,24 +78,22 @@ const MiniNav = styled.div`
       padding: 0;
     }
   }
-
 `
 const DashboardSection = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  max-width: 1420px;
+  justify-content: center;
+  max-width: 1200px;
   margin: 0 auto;
-  .student-details {
-    width: 350px;
-    box-shadow: ${props => props.theme.MainShadow};
-    height: 450px;
-    background-color: ${props => props.theme.cardBackgroundColor};
-  }
+  // .student-details {
+  //   width: 350px;
+  //   box-shadow: ${props => props.theme.MainShadow};
+  //   height: 450px;
+  //   background-color: ${props => props.theme.cardBackgroundColor};
+  // }
   .group-details {
     display: flex;
     flex-wrap: wrap;
-    width: 55%;
+    width: 100%;
   }
   .student-card {
     width: 45%;

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import './App.css';
+import Home from './components/pages/home/home';
 import Signin from './components/pages/signin/signin';
 import Dashboard from './components/pages/dashboard/dashboard';
 import ViewScore from './components/pages/viewScore/viewScore';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from './config/theme';
+import Register from "./components/pages/register/register";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -25,12 +27,10 @@ function App() {
         <div className="App">
             <GlobalStyles />
             <Switch>
-                <Route exact path="/" component={Signin}>
-                    <Signin />
-                </Route>
-                <Route path="/dashboard" component={Dashboard}>
-                    <Dashboard />
-                </Route>
+                <Route exact path="/" component={Home} />
+                <Route path="/signin" component={Signin} />
+                <Route path="/signup" component={Register} />
+                <Route path="/dashboard" component={Dashboard} />
                 <Route path="/view-score" component={ViewScore} />
             </Switch>
         </div>

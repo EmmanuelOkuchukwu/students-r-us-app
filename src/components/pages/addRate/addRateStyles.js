@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import TextField from '@material-ui/core/TextField';
+import CustomTextField from '../../layout/customTextField';
 
 const StyledAddRateForm = styled.div`
   padding: 25px;
   margin: 5px;  
-  width: 40%;
+  width: 100%;
   background-color: ${props => props.theme.cardBackgroundColor};
   form {
       width: 100%;
@@ -25,9 +25,20 @@ const StyledAddRateForm = styled.div`
   }
 `;
 
-const StyledTextField = styled(TextField)`
+const StyledTextField = styled(CustomTextField)`
   width: 100%; 
   margin: 5px; 
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+`
+
+const StyledTextArea = styled.textarea`
+  width: 100%;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
 `
 
 const StyledButton = styled.div`
@@ -45,5 +56,6 @@ const StyledButton = styled.div`
 export {
   StyledAddRateForm,
   StyledTextField,
-  StyledButton
+  StyledButton,
+  StyledTextArea
 }

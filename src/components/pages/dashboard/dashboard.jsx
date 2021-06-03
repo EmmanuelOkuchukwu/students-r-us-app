@@ -34,20 +34,20 @@ function Dashboard() {
                 </StyledBanner><br />
                 {/*----------------------------------------Main Dashboard Area---------------------------------------*/}
                 <DashboardSection>
-                    <div className="student-details">
-                        <div style={{ textAlign: 'center' }}>
-                            <PersonIcon style={{ fontSize: 100 }} />
-                            <h3><b>{mockData.fullName}'s Details</b></h3>
-                        </div>
-                        <div style={{ textAlign: 'center' }}>
-                            <h3>Your Full Name:</h3>
-                            <p>{mockData.fullName}</p>
-                            <h3>Your Email:</h3>
-                            <p>{mockData.email}</p>
-                            <h3>Your Group:</h3>
-                            <p>{mockData.group}</p>
-                        </div>
-                    </div>
+                    {/*<div className="student-details">*/}
+                    {/*    <div style={{ textAlign: 'center' }}>*/}
+                    {/*        <PersonIcon style={{ fontSize: 100 }} />*/}
+                    {/*        <h3><b>{mockData.fullName}'s Details</b></h3>*/}
+                    {/*    </div>*/}
+                    {/*    <div style={{ textAlign: 'center' }}>*/}
+                    {/*        <h3>Your Full Name:</h3>*/}
+                    {/*        <p>{mockData.fullName}</p>*/}
+                    {/*        <h3>Your Email:</h3>*/}
+                    {/*        <p>{mockData.email}</p>*/}
+                    {/*        <h3>Your Group:</h3>*/}
+                    {/*        <p>{mockData.group}</p>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     {/* TODO: add logic for the add score form to appear after clicking a button */}
                     {showHide ? (
                         <AddRate />

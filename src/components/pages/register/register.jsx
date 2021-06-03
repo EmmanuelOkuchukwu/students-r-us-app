@@ -5,7 +5,7 @@ import { useAlert } from 'react-alert';
 import CustomTextField from '../../layout/customTextField';
 import CustomSelectField from '../../layout/customSelectField';
 
-function Register({ setShowHide, showHide }) {
+function Register() {
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [fullname, setFullname] = useState('');
@@ -17,7 +17,6 @@ function Register({ setShowHide, showHide }) {
     const handleSignup = (evt) => {
         evt.preventDefault();
         alert.success('Successfully registered!');
-        setShowHide(!showHide);
     }
     return (
         <StyledContainer>
@@ -53,8 +52,7 @@ function Register({ setShowHide, showHide }) {
                         onChange={(evt) => setPassword(evt.target.value)}
                     />
                     <RegisterButton onClick={handleSignup}>Register</RegisterButton><br /><br />
-                    <p>Head back to the{' '}<StyledLink onClick={()=>setShowHide(false)}>Sign In</StyledLink></p>
-
+                    <p>Head back to the{' '}<StyledLink to="/signin">Sign In</StyledLink></p>
                 </form>
             </StyledSignupContainer>
         </StyledContainer>

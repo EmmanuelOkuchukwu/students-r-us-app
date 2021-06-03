@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useAlert from 'react-alert';
-import { StyledAddRateForm, StyledTextField, StyledButton } from './addRateStyles';
+import { StyledAddRateForm, StyledTextField, StyledTextArea, StyledButton } from './addRateStyles';
 
 export default function AddRate() {
     const [name, setName] = useState('');
@@ -12,10 +12,10 @@ export default function AddRate() {
         <StyledAddRateForm>
             <h2>Add rate</h2>
             <form>
-                <StyledTextField variant="outlined" type="text" value={name} onChange={(evt) => setName(evt.target.value)} name="name" label="Your Name" /><br />
-                <StyledTextField variant="outlined" type="text" value={comments} onChange={(evt) => setComments(evt.target.value)} name="comments" label="Comments" /><br />
-                <StyledTextField variant="outlined" type="number" value={addScore} onChange={(evt) => setAddScore(evt.target.value)} name="addscore" label="Add score" /><br />
-                <StyledTextField variant="outlined" type="text" value={studentName} onChange={(evt) => setStudentName(evt.target.value)} name="studentname" label="Name of Student" /><br />
+                <StyledTextField type="text" value={name} onChange={(evt) => setName(evt.target.value)} name="name" placeholder="Your Name" />
+                <StyledTextArea type="text" value={comments} onChange={(evt) => setComments(evt.target.value)} name="comments" rows="7" cols="50" placeholder="Comments"></StyledTextArea>
+                <StyledTextField type="number" value={addScore} onChange={(evt) => setAddScore(evt.target.value)} name="addscore" placeholder="Add score" />
+                <StyledTextField type="text" value={studentName} onChange={(evt) => setStudentName(evt.target.value)} name="studentname" placeholder="Name of Student" /><br />
                 <div className="flex-btn">
                     <StyledButton>Submit Rate</StyledButton>
                 </div>

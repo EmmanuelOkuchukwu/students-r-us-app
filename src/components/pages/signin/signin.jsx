@@ -29,35 +29,31 @@ function Signin() {
     // })
     return (
         <StyledContainer>
-            {showHide ? (
-                <Register setShowHide={setShowHide} showHide={showHide} />
-            ) : (
-                <StyledSigninContainer>
-                    <form className="styled-form">
-                        <h1>Sign In</h1>
-                        <CustomTextField
-                            className="text-field"
-                            type="text"
-                            variant="outlined"
-                            name="email"
-                            value={email}
-                            onChange={(evt) => setEmail(evt.target.value)}
-                            placeholder="Your Email"
-                        />
-                        <CustomTextField
-                            className="text-field"
-                            type="password"
-                            variant="outlined"
-                            name="password"
-                            value={password}
-                            onChange={(evt) => setPassword(evt.target.value)}
-                            placeholder="Enter Password"
-                        />
-                        <StyledButton onClick={handleSignin}>Sign In</StyledButton><br /><br />
-                        <p>New to Students R Us{' '}<Link to="#" onClick={() => setShowHide(true)}>Register here</Link></p>
-                    </form>
-                </StyledSigninContainer>
-            )}
+            <StyledSigninContainer>
+                <form className="styled-form">
+                    <h1>Sign In</h1>
+                    <CustomTextField
+                        className="text-field"
+                        type="text"
+                        variant="outlined"
+                        name="email"
+                        value={email}
+                        onChange={(evt) => setEmail(evt.target.value)}
+                        placeholder="Your Email"
+                    />
+                    <CustomTextField
+                        className="text-field"
+                        type="password"
+                        variant="outlined"
+                        name="password"
+                        value={password}
+                        onChange={(evt) => setPassword(evt.target.value)}
+                        placeholder="Enter Password"
+                    />
+                    <StyledButton onClick={handleSignin}>Sign In</StyledButton><br /><br />
+                    <p>New to Students R Us{' '}<Link to="/signup">Register here</Link></p>
+                </form>
+            </StyledSigninContainer>
         </StyledContainer>
     );
 }
