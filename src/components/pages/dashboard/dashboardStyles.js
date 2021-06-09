@@ -4,6 +4,7 @@ const StyledBanner = styled.div`
   height: 220px;
   padding: 10px 20px;
   background-color: ${props => props.theme.cardBackgroundColor};
+  margin: 40px 0;
   
   // Tablet view
   @media screen and (max-width: ${props => props.theme.tablet}) {
@@ -48,7 +49,7 @@ const MiniNav = styled.div`
     li {
       margin: 0 5px;
     }
-    a {
+    .link {
       text-decoration: none;
       color: steelblue;
       border-right: 1px solid #000;
@@ -97,11 +98,21 @@ const DashboardSection = styled.div`
   }
   .student-card {
     width: 45%;
-    height: 260px;
+    //height: 260px;
     margin: 10px auto;
     padding: 15px;
     box-shadow: ${props => props.theme.MainShadow};
     background-color: ${props => props.theme.cardBackgroundColor};
+    text-decoration: none;
+    color: #000;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .provisional-count {
+    text-align: right;
   }
   
   // Tablet view

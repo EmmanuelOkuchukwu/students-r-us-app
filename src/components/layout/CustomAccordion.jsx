@@ -32,6 +32,7 @@ const AccordionTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: lightgrey;
+  cursor: pointer;
   h1 {
     margin: 0 10px;
   }
@@ -51,7 +52,6 @@ const AccordionContent = styled.div`
   width: 100%;
   border-top: 1px solid #000;
   background-color: lightgrey;
-  border-radius: 4px;
   height: 133.33px;
   p {
     margin: 0 10px;

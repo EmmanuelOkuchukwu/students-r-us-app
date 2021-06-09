@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const ViewScoreStyled = styled.div`
+  margin: 40px 0;
   .accordion-size {
     max-width: 1400px;
     margin: 0 auto;

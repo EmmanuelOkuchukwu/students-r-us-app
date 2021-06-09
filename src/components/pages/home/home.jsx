@@ -19,7 +19,7 @@ export default function Home() {
                         <h4>Register for an account or Sign In for full access by clicking the buttons below</h4>
                         <div className="btn-flex">
                             <SigninButton onClick={() => history.push('/signin')}>Sign In</SigninButton>
-                            <SignupButton>Sign Up</SignupButton>
+                            <SignupButton onClick={() => history.push('/signup')}>Sign Up</SignupButton>
                         </div>
                     </div>
                 </div>
@@ -29,21 +29,21 @@ export default function Home() {
                     <Card>
                         <img src={LearnBackground} alt="" className="img-responsive" width="600" height="400" />
                         <div className="description">
-                            <h2>Student Dashboard</h2>
+                            <h2>Student Hub</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae cum eos et facilis itaque molestias non quae quaerat ullam! Cumque est illo suscipit? Autem doloribus magnam nam nulla ut!</p>
                         </div>
                     </Card>
                     <Card>
                         <img src={BulbsBackground} alt="" className="img-responsive" width="600" height="400" />
                         <div className="description">
-                            <h2>Student Dashboard</h2>
+                            <h2>Add a New Rate Score</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae cum eos et facilis itaque molestias non quae quaerat ullam! Cumque est illo suscipit? Autem doloribus magnam nam nulla ut!</p>
                         </div>
                     </Card>
                     <Card>
                         <img src={BoardBackground} alt="" className="img-responsive" width="600" height="400" />
                         <div className="description">
-                            <h2>Student Dashboard</h2>
+                            <h2>View Your Scores</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus beatae cum eos et facilis itaque molestias non quae quaerat ullam! Cumque est illo suscipit? Autem doloribus magnam nam nulla ut!</p>
                         </div>
                     </Card>

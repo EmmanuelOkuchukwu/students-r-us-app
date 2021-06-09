@@ -28,7 +28,7 @@ const StyledAddRateForm = styled.div`
 const StyledTextField = styled(CustomTextField)`
   width: 100%; 
   margin: 5px; 
-  padding: 10px;
+  padding: 15px;
   border-radius: 4px;
   border: none;
 `

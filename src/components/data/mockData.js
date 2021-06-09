@@ -10,9 +10,7 @@ export const mockData = {
             "fullName": "Anoj Kunes",
             "username": "ILoveMicahBell",
             "email": "anoj.kunes@gmail.com",
-            "rateScore": 10,
-            "comments": "Great work, teamplayer",
-            "raterUsername": "emmanz95 ",
+            "provisionalCount": "4"
         },
         {
             "id": 2,
@@ -20,9 +18,7 @@ export const mockData = {
             "fullName": "Kajan",
             "username": "Kajan",
             "email": "kajan94@gmail.com",
-            "rateScore": 10,
-            "comments": "Great work on your part",
-            "raterUsername": "emmanz95",
+            "provisionalCount": "5"
         },
         {
             "id": 3,
@@ -30,19 +26,7 @@ export const mockData = {
             "fullName": "Pablo Timothy Browning",
             "username": "HotCakes90z El Pablo",
             "email": "Pabz.thaG@gmail.com",
-            "rateScore": 3,
-            "comments": "Barely did anything",
-            "raterUsername": "emmanz95",
-        },
-        {
-            "id": 4,
-            "name": "Pablo T Browning",
-            "fullName": "Pablo Timothy Browning",
-            "username": "HotCakes90z El Pablo",
-            "email": "Pabz.thaG@gmail.com",
-            "rateScore": 3,
-            "comments": "Barely did anything",
-            "raterUsername": "emmanz95",
+            "provisionalCount": "2"
         }
     ]
 }

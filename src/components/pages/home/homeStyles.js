@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import backgroundImg from '../../assets/book-4126483.jpg';
 
 export const Banner = styled.div`
+  margin: 40px 0;
   height: 550px;
   background-image: url(${ backgroundImg });
   background-position: left;
