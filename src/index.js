@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import store from './app/store';
 
 const options = {
-    position: positions.TOP_CENTER,
+    position: positions.MIDDLE,
     timeout: 5000,
     offset: '30px',
     transition: transitions.SCALE
