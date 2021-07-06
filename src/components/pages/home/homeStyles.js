@@ -10,10 +10,10 @@ export const Banner = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px),0 0);
+  //clip-path: polygon(100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px),0 0);
   .signin-signup-container {
-    width: 750px;
-    max-width: 1400px;
+    //width: 750px;
+    max-width: 1200px;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.6);
     padding: 10px;
@@ -75,6 +75,11 @@ export const MainContent = styled.div`
     max-width: 1200px;
     margin: 0 auto;
   }
+  @media screen and (max-width: ${props => props.theme.mobile}) {
+    .card-flex {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const Card = styled.div`
@@ -90,5 +95,48 @@ export const Card = styled.div`
   .description {
     margin: 10px;
   }
+  button {
+    padding: 5px;
+    width: 150px;
+    background-color: blue;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px auto;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
 `;
 
+export const AboutLessons = styled.section`
+  .main-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text-desc {
+    margin: 0 20px;
+  }
+  .img-section {
+    margin: 0 20px;
+    width: 100%;
+    .img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: ${props => props.theme.mobile}) {
+    .main-section {
+      flex-direction: column;
+    }
+  }
+`;
+
+export const Lecturers = styled.section`
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+`;

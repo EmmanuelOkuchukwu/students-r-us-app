@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.div`
+export const StyledButton = styled.button`
   background-color: ${props => props.theme.backgroundColor};
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   text-align: center;
   margin: 5px 0;
+  width: 100%;
+  border: 1px solid rgba(var(--ca6, 219, 219, 219), 1);
   &:hover {
     transition: all 0.2s ease-in-out;
     background-color: lightslategrey;
@@ -44,5 +46,8 @@ export const StyledSigninContainer = styled.div`
     &:focus {
       outline: none;
     }
+  }
+  .invalid-feedback {
+    color: red;
   }
 `

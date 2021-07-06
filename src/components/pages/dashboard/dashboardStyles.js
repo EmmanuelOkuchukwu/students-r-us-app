@@ -9,6 +9,7 @@ const StyledBanner = styled.div`
   // Tablet view
   @media screen and (max-width: ${props => props.theme.tablet}) {
     height: 190px;
+    margin: 53px 0;
     h1 {
       font-size: 25px;
     }
@@ -40,7 +41,8 @@ const MiniNav = styled.div`
   border-radius: 4px;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: ${props => props.theme.MainShadow};
+  border: 1px solid rgba(var(--ca6,219,219,219),1);
+  background-color: #fff;
   ul {
     display: flex;
     list-style: none;
@@ -52,7 +54,7 @@ const MiniNav = styled.div`
     .link {
       text-decoration: none;
       color: steelblue;
-      border-right: 1px solid #000;
+      border-right: 1px solid rgba(var(--ca6,219,219,219),1);
       padding: 10px 20px;
       cursor: pointer;
       &:hover {
@@ -101,7 +103,8 @@ const DashboardSection = styled.div`
     //height: 260px;
     margin: 10px auto;
     padding: 15px;
-    box-shadow: ${props => props.theme.MainShadow};
+    // box-shadow: ${props => props.theme.MainShadow};
+    border: 1px solid rgba(var(--ca6,219,219,219),1);
     background-color: ${props => props.theme.cardBackgroundColor};
     text-decoration: none;
     color: #000;
@@ -118,6 +121,7 @@ const DashboardSection = styled.div`
   // Tablet view
   @media screen and (max-width: ${props => props.theme.tablet}) {
     flex-direction: column;
+    margin: 0 15px;
     .group-details {
       flex-direction: column;
       width: 100%;

@@ -7,7 +7,8 @@ const StyledAddRateForm = styled.div`
   width: 100%;
   background-color: ${props => props.theme.cardBackgroundColor};
   form {
-      width: 100%;
+    width: 100%;
+    padding: 10px 150px;
   }
   .flex-btn {
       display: flex;

@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from '../../layout/navbar';
 import { StyledBanner, FlexDiv, MiniNav, DashboardSection } from './dashboardStyles';
-import PersonIcon from '@material-ui/icons/Person';
 import { mockData } from '../../data/mockData';
-import { useAlert } from 'react-alert';
 import AddRate from '../addRate/addRate';
 import Modal from "../../layout/modal";
+import { ToastContainer } from 'react-toastify';
 
 function Dashboard() {
     const [isLoading, setIsLoading] = useState(false);
     const [showHide, setShowHide] = useState(false);
-    const alert = useAlert();
     React.useEffect(() => {
         setIsLoading(false)
     },[])
@@ -58,6 +56,7 @@ function Dashboard() {
                     </div>
                     )}
                 </DashboardSection>
+                <ToastContainer />
             </div>
         );
     }
